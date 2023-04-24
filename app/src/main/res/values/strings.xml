@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">HappyPlacesApp</string>
+    <string name="no_places_found">No Happy Places Found Yet. Kindly add one.</string>
+    <string name="image_content_description">image</string>
+    <string name="button_add">Happy place add button</string>
+    <string name="button_view_on_map">VIEW ON MAP</string>
+    <string name="button_update">UPDATE</string>
+</resources>
