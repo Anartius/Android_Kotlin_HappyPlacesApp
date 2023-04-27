@@ -9,6 +9,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.happyplacesapp.Constants
 import com.example.happyplacesapp.adapters.HappyPlacesAdapter
 import com.example.happyplacesapp.database.DatabaseHandler
 import com.example.happyplacesapp.databinding.ActivityMainBinding
@@ -26,6 +27,9 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setSupportActionBar(binding.toolbarMain)
+        supportActionBar?.title = Constants.APP_NAME
 
         getHappyPlacesListFromLocalDB()
 
@@ -63,6 +67,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         if (placesList.isNotEmpty()) {
+            binding.toolbarMain.visibility = View.VISIBLE
             binding.rvPlacesList.visibility = View.VISIBLE
             binding.tvNoPlacesFound.visibility = View.GONE
 
@@ -111,6 +116,7 @@ class MainActivity : AppCompatActivity() {
             deleteItemTouchHelper.attachToRecyclerView(binding.rvPlacesList)
 
         } else{
+            binding.toolbarMain.visibility = View.GONE
             binding.rvPlacesList.visibility = View.GONE
             binding.tvNoPlacesFound.visibility = View.VISIBLE
         }

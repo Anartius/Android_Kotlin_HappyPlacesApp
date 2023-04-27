@@ -2,7 +2,15 @@
     <string name="app_name">HappyPlacesApp</string>
     <string name="no_places_found">No Happy Places Found Yet. Kindly add one.</string>
     <string name="image_content_description">image</string>
-    <string name="button_add">Happy place add button</string>
-    <string name="button_view_on_map">VIEW ON MAP</string>
-    <string name="button_update">UPDATE</string>
+    <string name="btn_add">Happy place add button</string>
+    <string name="btn_view_on_map">VIEW ON MAP</string>
+    <string name="btn_update">UPDATE</string>
+    <string name="btn_get_location">SUBMIT</string>
+    <string name="btn_select_current_location">SELECT CURRENT LOCATION</string>
+    <string name="btn_save">SAVE</string>
+    <string name="tv_add_image">ADD IMAGE</string>
+    <string name="hint_location">Location</string>
+    <string name="hint_date">Date</string>
+    <string name="hint_description">Description</string>
+    <string name="hint_title">Title</string>
 </resources>
