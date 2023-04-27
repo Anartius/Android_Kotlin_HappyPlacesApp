@@ -21,6 +21,7 @@ import com.karumi.dexter.MultiplePermissionsReport
 import com.karumi.dexter.PermissionToken
 import com.karumi.dexter.listener.PermissionRequest
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener
+import org.osmdroid.config.Configuration
 import org.osmdroid.events.MapEventsReceiver
 import org.osmdroid.tileprovider.tilesource.TileSourceFactory
 import org.osmdroid.util.GeoPoint
@@ -50,6 +51,11 @@ class OpenStreetMapActivity : AppCompatActivity() {
         map.setUseDataConnection(true)
         map.setMultiTouchControls(true)
         map.isTilesScaledToDpi = true
+
+        Configuration.getInstance().load(
+            applicationContext,
+            getSharedPreferences("HappyPlacesApp", MODE_PRIVATE)
+        )
 
         if (intent.hasExtra(Constants.LOCATION)) {
             val locationFromIntent = if (SDK_INT >= 33) {
